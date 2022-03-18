@@ -1,9 +1,10 @@
 import socket
+import server_info
 
 # initialize server
 port = 4375
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-serversocket.bind(('0.0.0.0', 22))
+serversocket.bind(('0.0.0.0', server_info.SERVER_PORT))
 
 
 # listen for people to connect

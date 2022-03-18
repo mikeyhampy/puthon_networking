@@ -1,8 +1,9 @@
 import socket
 import sys
 import threading
+import server_info
 
-server_ip = ('', 22)
+server_ip = (server_info.SERVER_IP, server_info.SERVER_PORT)
 print('connecting to server')
 
 clientsocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
