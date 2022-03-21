@@ -14,7 +14,7 @@ while True:
     while True:
         data, address = serversocket.recvfrom(128)
 
-        print('connection from: {}'.format(address))
+        print('connection from: first client')
         clients_to_connect.append(address)
 
         serversocket.sendto(b'ready', address)
