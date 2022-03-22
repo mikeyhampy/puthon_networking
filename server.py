@@ -31,5 +31,5 @@ while True:
     c2_addr, c2_port = c2
 
     # send client info to each other
-    serversocket.sendto('first client {} {}'.format(c1_port, port).encode(), c2)
-    serversocket.sendto('second client {} {}'.format(c2_port, port).encode(), c1)
+    serversocket.sendto('{} {} {}'.format(c1_addr, c1_port, port).encode(), c2)
+    serversocket.sendto('{} {} {}'.format(c2_addr, c2_port, port).encode(), c1)
